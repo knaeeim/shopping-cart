@@ -89,6 +89,7 @@ document.getElementById("add-to-cart").addEventListener("click", () => {
 document.getElementById("checkout-container").addEventListener("click", () => {
   document.getElementById("cart-modal").classList.remove("hidden");
   const cartModalContent = document.getElementById("cart-items");
+  cartModalContent.innerHTML = "";
   let totalPrice = 0;
   let totalQuantity = 0;
   for (let i = 0; i < cartItems.length; i++) {
@@ -118,7 +119,7 @@ document.getElementById("checkout-container").addEventListener("click", () => {
         <td class="px-4 py-4 ">  </td>
         <td class="px-4 py-4 "> ${totalQuantity} </td>
         <td class="px-4 py-4 "> $${totalPrice} </td>
-`;
+  `;
   cartModalContent.appendChild(totalDetailsRow);
 });
 
